@@ -32,7 +32,7 @@ public class SocieteArrayList implements  IGestion<Employe>{
     @Override
     public void displayEmploye() {
         for (Employe employe: employes)
-        {System.out.println(employe);}
+        {System.out.println(employe.toString());}
     }
 
     @Override
@@ -53,6 +53,7 @@ public class SocieteArrayList implements  IGestion<Employe>{
             public int compare(Employe o1, Employe o2) {
                 return o1.getGrade() - o2.getGrade() ;
             }};
+        Collections.sort(employes, compar1.thenComparing(compar2));
 
 
     }
