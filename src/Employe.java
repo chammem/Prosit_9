@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Employe {
+public class Employe implements Comparable<Employe>{
     int identifiant,grade;
     String nom,prenom,nom_dep;
 
@@ -73,5 +73,12 @@ public class Employe {
                 ", nom_dep='" + nom_dep + '\'' +
                 '}';
     }
+
+    @Override
+    public int compareTo(Employe o) {
+        return this.identifiant - o.identifiant;
+    }
+
+
 
 }

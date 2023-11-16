@@ -43,6 +43,17 @@ public class SocieteArrayList implements  IGestion<Employe>{
 
     @Override
     public void trierEmployeParNomDépartementEtGrade() {
+        Comparator <Employe> compar1 = new Comparator<Employe>() {
+            @Override
+            public int compare(Employe o1, Employe o2) {
+                return o1.getNom_dep().compareTo(o2.getNom_dep()) ;
+            }
+        };
+        Comparator <Employe> compar2 = new Comparator<Employe>() {
+            public int compare(Employe o1, Employe o2) {
+                return o1.getGrade() - o2.getGrade() ;
+            }};
+
 
     }
 }
